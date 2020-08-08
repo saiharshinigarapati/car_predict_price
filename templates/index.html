@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width,initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div style="color: blue;">
+    <form action="{{url_for('predict')}}" method='post'>
+        <h2>Prediction analysis</h2>
+        <h3>Year</h3>
+        <input name="Year" type="number">
+        <h3>What is the Showroom Price?(in lakhs)</h3>
+        <br>
+        <input name="Present_Price" required="required">
+        <h3>how many km drived</h3>
+        <br>
+        <input name="Kms_Drive" required="required">
+        <h3>how many owners previously</h3>
+        <br>
+        <input name="Owner" required="required">
+        <h3>What is the fuel type</h3>
+        <br>
+        <select name="Fuel_Type_Petrol" required="required">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Diesel">CNG</option>
+        </select>
+        <h3>are you a dealer or Individual</h3>
+        <br>
+        <select name="Seller_Type_Individual" required="required">
+            <option value="Dealer">dealer</option>
+            <option value="Individual">Individual</option>
+        </select>
+        <h3>Transmission Type</h3>
+        <br>
+        <select name="Transmission_Manual" required="required">
+            <option value="Mannual">Mannual</option>
+            <option value="Automatic">Automatic</option>
+        </select>
+        <br>
+        <br>
+        <button id="sub" type="submit">calculate the selling price</button> 
+        <br>
+        </form>
+        <br>
+        <br>
+        <h3>{{prediction_text}}</h3>
+        </div>
+        </body>
+        </html>
+               
+
+
+
+
+
+</body>
